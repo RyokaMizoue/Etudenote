@@ -20,11 +20,11 @@ require("channels")
 //= require highcharts/highcharts-more
 //= require highcharts/highstock
 
-//= require Chart.min
+
 require("highcharts/highcharts")
 require("highcharts/highcharts-more")
 require("highcharts/highstock")
 
-require("Chart.min")
+
 
 import '@fortawesome/fontawesome-free/js/all'
