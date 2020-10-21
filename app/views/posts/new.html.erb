@@ -1,0 +1,25 @@
+<h1>Etudenotes</h1>
+<h3>新規post</h3>
+
+
+<%= form_for @post do |f| %>
+  <div class="field">
+    <%= f.label :subject %>
+    <%= f.text_field :subject, :size => 50 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :book %>
+    <%= f.text_field :book, :size => 50 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :study_time %>
+    <%= f.number_field :time, :size => 10 %>
+    <span>分</span>
+  </div>
+  <%= f.submit "Postを投稿する" %>
+<% end %>
+
+<%= link_to "Post一覧に戻る", posts_path %>
+

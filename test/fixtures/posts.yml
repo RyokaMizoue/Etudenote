@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  study_time: 2020-09-11 22:35:14
+  subject: MyString
+  book: MyString
+
+two:
+  study_time: 2020-09-11 22:35:14
+  subject: MyString
+  book: MyString

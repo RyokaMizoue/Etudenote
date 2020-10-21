@@ -1,0 +1,17 @@
+.profile-links {
+    list-style: none;
+    padding-right: 40px;
+    .profile-link {
+      font-size: 50px;
+      display: inline-block;
+      width: 20%;
+      text-align: right;
+      /*Twitter*/
+      .fa-twitter{color:#1da1f2;}
+      /*Facebook*/
+      .fa-facebook-square{color:#3b5998;}
+      /*instagram*/
+      .fa-instagram{color:#e1306c;}
+    }
+  }
+  

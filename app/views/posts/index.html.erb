@@ -1,0 +1,53 @@
+
+<h2>投稿一覧</h2>
+
+<%= stylesheet_link_tag 'index', :media => "all" %>
+<div class="example">
+  <img src="sakura3.png" />
+  <p>
+ <%= form_tag({controller:"posts",action:"index"}, method: :get) do %>
+   <%= text_field_tag :search %>
+   <%= submit_tag '検索する'  %>
+<% end %></p>
+</div>
+
+<%= link_to "新規投稿へ", posts_new_path %>
+<%= link_to "マイページ", user_path(current_user.id) %>
+
+<div class="posts-container">
+  <% @posts.each do |t| %>
+
+
+     <div class="sample_box2_3">
+    <div class="post">
+    <div class="main-box">
+        <div class="left-container">
+        <a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
+        <br/>
+      <%= t.time %>分
+      <%= t.subject %>
+      <%= t.book %>
+      <%= t.created_at %>
+      </div>
+      <div class="right-container">
+      <br/>
+      <% if user_signed_in? && current_user.id == t.user_id %>  
+      <%= link_to "編集", edit_post_path(t.id) %>
+      <%= link_to "削除", post_path(t.id), method: :delete %>
+      <% end %>
+<% if current_user.already_liked?(t) %>
+<%=link_to post_like_path(id: t.id, post_id: t.id), method: :delete do%>
+<i class="fas fa-heart"></i><%=t.likes.count%>
+<%end%>
+     <% else %>
+      <%=link_to post_likes_path(id: t.id, post_id: t.id), method: :post do%>
+      <i class="far fa-heart"></i><%=t.likes.count%>
+<%end%>
+     <% end %>
+    </div>
+  </div>
+    <p class="time"><%= t.created_at %></p>
+    </div>
+    </div>
+  <% end %>
+</div>

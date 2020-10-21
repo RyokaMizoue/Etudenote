@@ -1,0 +1,96 @@
+<h1>users#show</h1>
+
+<p>名前 : <%= @user.name %></p>
+<p>メールアドレス : <%= @user.email %></p>
+<p>プロフィール : <%= @user.profile %></p>
+<div class = "sns-link">
+<ul class="profile-links">
+  <% if @user.twitter.present? %>
+    <li class="profile-link">
+      <%= link_to @user.twitter, target: :_blank do %>
+        <i class="fab fa-twitter-square"></i>
+      <% end %>
+    </li>
+  <% end %>
+  <% if @user.instagram.present? %>
+    <li class="profile-link">
+      <%= link_to @user.instagram, target: :_blank do %>
+        <i class="fab fa-instagram"></i>
+      <% end %>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+<% if current_user.id == @user.id %>
+  <%= link_to "編集する", edit_user_registration_path %>
+  <%= link_to "タスク一覧", tasks_path %>
+<% end %>
+
+<% @user.posts.each do |t| %>
+  <%= t.user.name %>
+  <%= t.book %>
+  <%= t.time %>
+<% end %>
+<br>
+<%= @m0 %>
+  
+
+<h1>グラフ</h1>
+<canvas id="myBarChart"></canvas>
+
+<%= link_to "Post一覧に戻る", posts_path %>　　　　　
+
+<script>
+var date = new Date();
+var date_1 = new Date();
+date_1.setDate(date_1.getDate() - 0)
+var date_2 = new Date();
+date_2.setDate(date_1.getDate() - 1)
+var date_3 = new Date();
+date_3.setDate(date_1.getDate() - 2)
+var date_4 = new Date();
+date_4.setDate(date_1.getDate() - 3)
+var date_5 = new Date();
+date_5.setDate(date_1.getDate() - 4)
+var date_6 = new Date();
+date_6.setDate(date_1.getDate() - 5)
+var date_7 = new Date();
+date_7.setDate(date_1.getDate() - 6)
+
+
+  var ctx = document.getElementById("myBarChart");
+  var myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [(date_1.getMonth()+1)+'月'+(date_1.getDate())+'日', (date_2.getMonth()+1)+'月'+(date_2.getDate())+'日', (date_3.getMonth()+1)+'月'+(date_3.getDate())+'日', (date_4.getMonth()+1)+'月'+(date_4.getDate())+'日', (date_5.getMonth()+1)+'月'+(date_5.getDate())+'日', (date_6.getMonth()+1)+'月'+(date_6.getDate())+'日', (date_7.getMonth()+1)+'月'+(date_7.getDate())+'日'],
+      datasets: [
+        {
+          label: '',
+          data: [<%= @m0 %>, <%= @m1 %>, <%= @m2 %>, <%= @m3 %>, <%= @m4 %>, <%= @m5 %>, <%= @m6 %>],
+          backgroundColor: "rgba(219,39,91,0.5)"
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: '学習時間'
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            suggestedMax: 100,
+            suggestedMin: 0,
+            stepSize: 30,
+            callback: function(value, index, values){
+              return  value +  '分'
+            }
+          }
+        }]
+      },
+    }
+  });
+  </script>
+
+  

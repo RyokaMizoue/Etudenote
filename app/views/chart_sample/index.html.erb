@@ -1,0 +1,48 @@
+<h1>ChartSample#index</h1>
+<p>Find me in app/views/chart_sample/index.html.erb</p>
+
+<h1>グラフ</h1>
+<canvas id="myBarChart"></canvas>
+　　　　　　　　
+
+<script>
+var date = new Date();
+var date_1 = new Date();
+date_1.setDate(date_1.getDate() - 1)
+var date_2 = new Date();
+date_2.setDate(date_1.getDate() - 2)
+
+
+  var ctx = document.getElementById("myBarChart");
+  var myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: [(date_1.getMonth()+1)+'月'+(date_1.getDate())+'日', '8月2日', '8月3日', '8月4日', '8月5日', '8月6日', '8月7日'],
+      datasets: [
+        {
+          label: '',
+          data: [62, 65, 93, 85, 51, 66, 47],
+          backgroundColor: "rgba(219,39,91,0.5)"
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: '学習時間'
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            suggestedMax: 100,
+            suggestedMin: 0,
+            stepSize: 10,
+            callback: function(value, index, values){
+              return  value +  '人'
+            }
+          }
+        }]
+      },
+    }
+  });
+  </script>

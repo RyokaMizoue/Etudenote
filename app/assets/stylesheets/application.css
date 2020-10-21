@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    background-image: url("");
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ",
+      Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+      background-color: white;
+  }
+  header {
+    background-color: #F5A9D0;
+    height: 80px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header a {
+    color: white; 
+    text-decoration: none; 
+  }
+  header h1 {
+    color: white;
+    margin-left: 20px;
+  }
+  .header-list {
+    display: flex;
+    align-items: center;
+  }
+  header ul {
+    display: flex;
+  }
+  header li {
+    list-style: none;
+    margin-right: 40px;
+  }
+  footer {
+    color: white;
+    height: 30px;
+    background-color: #000;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  h2 {
+    position: relative;
+    background: #dfefff;
+    box-shadow: 0px 0px 0px 5px #dfefff;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+  }
+  
+  h2:after {
+    position: absolute;
+    content: '';
+    left: -7px;
+    top: -7px;
+    border-width: 0 0 15px 15px;
+    border-style: solid;
+    border-color: #fff #fff #a8d4ff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+  }
+  
+  .sample_box2_3 {
+    padding: 1em 1.5em;
+    margin: 2em 0;
+    background-color: #F6CEF5;/*背景色*/
+    box-shadow: 0 0 0 8px #F6CEF5;/*背景色外側*/
+    border: 2px dashed #ffffff;/*線*/
+    color: #000000;/*文字色*/
+}
+.sample_box2_3 p {
+    margin: 0; 
+    padding: 0;
+}
+
+.example {/*親div*/
+  position: relative;/*相対配置*/
+  }
+
+.example p {
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  top: 0;
+  left: 0;
+  }
+
+.example img {
+  width: 100%;
+  }
