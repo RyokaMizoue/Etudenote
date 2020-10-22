@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_21_110628) do
+ActiveRecord::Schema.define(version: 2020_10_22_064433) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "comment"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_10_21_110628) do
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "time"
+    t.integer "time"
     t.string "subject"
     t.string "book"
     t.datetime "created_at", precision: 6, null: false

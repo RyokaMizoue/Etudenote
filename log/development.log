@@ -47902,3 +47902,201 @@ puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.6) lib/puma/server.rb:472:in `process_client'
 puma (4.3.6) lib/puma/server.rb:328:in `block in run'
 puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (167.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (15.7ms)[0m  [1m[34mSELECT GET_LOCK('1013676152572286175', 0)[0m
+  [1m[35m (210.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to ChangeDataTimeToPost (20201022063816)
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('1013676152572286175')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('1013676152572286175', 0)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to ChangeDataTimeToPosts (20201022064433)
+  [1m[35m (1223.4ms)[0m  [1m[35mALTER TABLE `posts` CHANGE `time` `time` int DEFAULT NULL[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (54.5ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20201022064433')[0m
+  [1m[35m (48.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (22.6ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('1013676152572286175')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2020-10-22 15:48:18 +0900
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 46.0ms | Allocations: 466)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in C:/Users/ryouka/Desktop/etudenotes/public/packs
+[Webpacker] Hash: 0bfbd8b389cc46dd3015
+Version: webpack 4.44.1
+Time: 8984ms
+Built at: 2020-10-22 15:48:47
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-ca9a749994f087f5331c.js   1.34 MiB  application  [emitted] [immutable]  application
+js/application-ca9a749994f087f5331c.js.map   1.39 MiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-ca9a749994f087f5331c.js js/application-ca9a749994f087f5331c.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 926 bytes {application} [built]
+[./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 905 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 7 hidden modules
+
+Completed 200 OK in 28686ms (Views: 28540.2ms | ActiveRecord: 0.0ms | Allocations: 40504)
+
+
+Started GET "/posts" for ::1 at 2020-10-22 15:48:51 +0900
+Processing by PostsController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 371)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-10-22 15:48:52 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 133.3ms | Allocations: 609)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 365.0ms | Allocations: 2374)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 636ms (Views: 465.3ms | ActiveRecord: 103.0ms | Allocations: 17659)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-10-22 15:49:13 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"1kRiDE8l5zUC8+eB3MTBiR5huonY3fd/Q66OzUJqIR5CvGH5AjagjLf4jgT8grg0+2Y24Z3qP7mshFM9xgkjBA==", "user"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (24.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'a@a' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 832ms (ActiveRecord: 24.2ms | Allocations: 6682)
+
+
+Started GET "/posts" for ::1 at 2020-10-22 15:49:14 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (24.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:18
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mLike Exists? (47.9ms)[0m  [1m[34mSELECT 1 AS one FROM `likes` WHERE `likes`.`user_id` = 3 AND `likes`.`post_id` = 2 LIMIT 1[0m
+  ↳ app/models/user.rb:18:in `already_liked?'
+  [1m[35m (36.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 2[0m
+  ↳ app/views/posts/index.html.erb:40
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mLike Exists? (7.7ms)[0m  [1m[34mSELECT 1 AS one FROM `likes` WHERE `likes`.`user_id` = 3 AND `likes`.`post_id` = 3 LIMIT 1[0m
+  ↳ app/models/user.rb:18:in `already_liked?'
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 3[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mLike Exists? (7.5ms)[0m  [1m[34mSELECT 1 AS one FROM `likes` WHERE `likes`.`user_id` = 3 AND `likes`.`post_id` = 4 LIMIT 1[0m
+  ↳ app/models/user.rb:18:in `already_liked?'
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 4[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mLike Exists? (38.0ms)[0m  [1m[34mSELECT 1 AS one FROM `likes` WHERE `likes`.`user_id` = 3 AND `likes`.`post_id` = 6 LIMIT 1[0m
+  ↳ app/models/user.rb:18:in `already_liked?'
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 6[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mLike Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM `likes` WHERE `likes`.`user_id` = 3 AND `likes`.`post_id` = 7 LIMIT 1[0m
+  ↳ app/models/user.rb:18:in `already_liked?'
+  [1m[35m (15.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 7[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mLike Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM `likes` WHERE `likes`.`user_id` = 3 AND `likes`.`post_id` = 8 LIMIT 1[0m
+  ↳ app/models/user.rb:18:in `already_liked?'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 8[0m
+  ↳ app/views/posts/index.html.erb:44
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:25
+  [1m[36mLike Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `likes` WHERE `likes`.`user_id` = 3 AND `likes`.`post_id` = 9 LIMIT 1[0m
+  ↳ app/models/user.rb:18:in `already_liked?'
+  [1m[35m (48.0ms)[0m  [1m[34mSELECT COUNT(*) FROM `likes` WHERE `likes`.`post_id` = 9[0m
+  ↳ app/views/posts/index.html.erb:44
+  Rendered posts/index.html.erb within layouts/application (Duration: 1627.5ms | Allocations: 32962)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1976ms (Views: 1426.8ms | ActiveRecord: 403.8ms | Allocations: 41689)
+
+
+Started GET "/sakura3.png" for ::1 at 2020-10-22 15:49:16 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/sakura3.png"):
+  
+actionpack (6.0.3.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/3" for ::1 at 2020-10-22 15:49:22 +0900
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:3:in `show'
+  [1m[35m (39.1ms)[0m  [1m[34mSELECT SUM(`posts`.`time`) FROM `posts` WHERE `posts`.`created_at` BETWEEN '2020-10-22 00:00:00' AND '2020-10-22 23:59:59.999999' AND `posts`.`user_id` = 3[0m
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  [1m[35m (17.6ms)[0m  [1m[34mSELECT SUM(`posts`.`time`) FROM `posts` WHERE `posts`.`created_at` BETWEEN '2020-10-21 00:00:00' AND '2020-10-21 23:59:59.999999' AND `posts`.`user_id` = 3[0m
+  ↳ app/controllers/users_controller.rb:5:in `show'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM(`posts`.`time`) FROM `posts` WHERE `posts`.`created_at` BETWEEN '2020-10-20 00:00:00' AND '2020-10-20 23:59:59.999999' AND `posts`.`user_id` = 3[0m
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT SUM(`posts`.`time`) FROM `posts` WHERE `posts`.`created_at` BETWEEN '2020-10-19 00:00:00' AND '2020-10-19 23:59:59.999999' AND `posts`.`user_id` = 3[0m
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM(`posts`.`time`) FROM `posts` WHERE `posts`.`created_at` BETWEEN '2020-10-18 00:00:00' AND '2020-10-18 23:59:59.999999' AND `posts`.`user_id` = 3[0m
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT SUM(`posts`.`time`) FROM `posts` WHERE `posts`.`created_at` BETWEEN '2020-10-17 00:00:00' AND '2020-10-17 23:59:59.999999' AND `posts`.`user_id` = 3[0m
+  ↳ app/controllers/users_controller.rb:9:in `show'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT SUM(`posts`.`time`) FROM `posts` WHERE `posts`.`created_at` BETWEEN '2020-10-16 00:00:00' AND '2020-10-16 23:59:59.999999' AND `posts`.`user_id` = 3[0m
+  ↳ app/controllers/users_controller.rb:10:in `show'
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  ↳ app/views/users/show.html.erb:25
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`user_id` = 3[0m
+  ↳ app/views/users/show.html.erb:30
+  Rendered users/show.html.erb within layouts/application (Duration: 133.3ms | Allocations: 3562)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 396ms (Views: 230.9ms | ActiveRecord: 62.3ms | Allocations: 15620)
+
+
+Started GET "/users/sakura3.png" for ::1 at 2020-10-22 15:49:23 +0900
+Processing by UsersController#show as PNG
+  Parameters: {"id"=>"sakura3"}
+  [1m[36mUser Load (14.7ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = NULL LIMIT 1[0m
+  ↳ app/controllers/users_controller.rb:3:in `show'
+Completed 404 Not Found in 21ms (ActiveRecord: 14.7ms | Allocations: 1231)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sakura3):
+  
+app/controllers/users_controller.rb:3:in `show'
