@@ -1,7 +1,6 @@
-<h1>Etudenotes</h1>
-<h3>新規post</h3>
-
-
+<h2>新規投稿</h2>
+<br>
+<div class="box16">
 <%= form_for @post do |f| %>
   <div class="field">
     <%= f.label :subject %>
@@ -20,6 +19,6 @@
   </div>
   <%= f.submit "Postを投稿する" %>
 <% end %>
-
+</div>
 <%= link_to "Post一覧に戻る", posts_path %>
 

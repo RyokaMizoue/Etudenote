@@ -1,33 +1,32 @@
 
 <h2>投稿一覧</h2>
-
+<%= form_tag({controller:"posts",action:"index"}, method: :get) do %>
+  <br/>
+  <%= text_field_tag :search %>
+  <%= submit_tag '検索する'  %>
+<% end %>
 <%= stylesheet_link_tag 'index', :media => "all" %>
+<div style="text-align: center">
 <div class="example">
-  <img src="sakura3.png" />
-  <p>
- <%= form_tag({controller:"posts",action:"index"}, method: :get) do %>
-   <%= text_field_tag :search %>
-   <%= submit_tag '検索する'  %>
-<% end %></p>
-</div>
 
-<%= link_to "新規投稿へ", posts_new_path %>
-<%= link_to "マイページ", user_path(current_user.id) %>
+<%= link_to image_tag('fukidashi.png', size: '100x100'), user_path(current_user.id) %>
+<br>
+<%= link_to image_tag('image7.jpg'), user_path(current_user.id) %>
+</div>
+</div>
 
 <div class="posts-container">
   <% @posts.each do |t| %>
-
-
+    
      <div class="sample_box2_3">
     <div class="post">
     <div class="main-box">
         <div class="left-container">
-        <a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
+        <a href="/users/<%= t.user.id %>"><%= image_tag 'image5.jpg', class: 'fraise' %> <%= t.user.name %></a>
         <br/>
-      <%= t.time %>分
-      <%= t.subject %>
-      <%= t.book %>
-      <%= t.created_at %>
+      教科：<%= t.subject %>　
+      教材：<%= t.book %>　
+      時間：<%= t.time %>分
       </div>
       <div class="right-container">
       <br/>
